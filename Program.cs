@@ -1,4 +1,4 @@
-﻿class Program
+class Program
 {
      static void Main(string[] args)
     {
@@ -12,6 +12,19 @@
         Console.WriteLine("3 - MULTIPLICATE");
         Console.WriteLine("4 - DIVIDE");
 
+        Console.WriteLine("---------------");
+        Console.WriteLine("Select a option: ");
+
+        short res = short.Parse(Console.ReadLine());
+
+        switch(res) {
+            case 1: soma(); break;
+            case 2: subtrai(); break;
+            case 3: multiplication(); break;
+            case 4: division(); break;
+            case 5: System.Environment.Exit(0); break;
+            default: menu(); break;
+        }
 
     }
     static void soma(){
@@ -28,6 +41,9 @@
        // Console.WriteLine("O resultado da soma é: " + resultado);
         Console.WriteLine($"O resultado da soma é {resultado}");
         //Console.WriteLine($"O resultado da soma é {v1 + v2}");
+
+        Console.ReadKey();
+        menu();
     }
     static void subtrai(){
         Console.Clear();
@@ -41,6 +57,9 @@
         float resultado = v1 - v2;
 
         Console.WriteLine($"O resultado da subtração é {resultado}");
+
+        Console.ReadKey();
+        menu();
     }
     static void multiplication(){
         Console.Clear();
@@ -54,6 +73,9 @@
         float result = v1 * v2;
 
         Console.WriteLine($"THe result of the multiplication is {result}");
+
+        Console.ReadKey();
+        menu();
     }
     static void division(){
         Console.Clear();
@@ -67,5 +89,8 @@
         float result = v1 / v2;
 
         Console.WriteLine($"The result of the divison is {result}");
+
+        Console.ReadKey();
+        menu();
     }
 }
